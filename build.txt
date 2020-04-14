@@ -1,0 +1,25 @@
+/*Brennan Jackson - Deployment Exercise*/
+
+To build a deployment and .jar file for the project:
+
+1. Make sure that gradle is installed. You can check gradle's status by running the command: 'gradle --version'
+	**Note: if you do not have gradle installed, we have included the gradle wrapper to use intead. Simply subsititue 'gradle' in all commands with either './graldew' (*nix or mac os) 'gradle.bat' (Windows)
+
+2. Make sure that the java project files are structured as follows:
+
+.
++--src
+   +--main
+      +--java
+         +--*.java
+   +--test
+      +--java
+         +--*.java
+
+3. (OPTIONAL) To build just the jar file for the project, run the command 'gradle jar'. The resulting jar file can be found in the 'build/libs' directory.
+
+4. To build the entire project, including the jar file along with running test classes, generating tar and zip files, and more, use the command: 'gradle build'
+
+That's it. Using either the command found in step 3 or 4 you can successfully build the project and jar file in a single command!
+
+**For instructions on how to run the command, see README** 

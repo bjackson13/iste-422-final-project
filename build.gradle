@@ -1,3 +1,8 @@
+/*
+	Brennan Jackson
+	Deployment Exercise Build File
+	April 2020
+*/
 apply plugin: 'java'
 apply plugin: 'application'
 mainClassName = "RunEdgeConvert"
