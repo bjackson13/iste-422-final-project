@@ -8,6 +8,7 @@ To build a deployment and .jar file for the project:
 2. Make sure that the java project files are structured as follows:
 
 .
++--build.gradle
 +--src
    +--main
       +--java
