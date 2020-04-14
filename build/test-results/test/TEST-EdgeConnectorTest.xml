@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="EdgeConnectorTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2020-04-14T16:47:10" hostname="SteveCalhoonBusinessTycoon" time="0.016">
+  <properties/>
+  <testcase name="testGetEndPoint1Int" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testGetEndPoint2Int" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testGetIsEP2TableFalse" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testGetEndStyle1String" classname="EdgeConnectorTest" time="0.0"/>
+  <testcase name="testGetEndStyle2String" classname="EdgeConnectorTest" time="0.0"/>
+  <testcase name="testGetNumConnector" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testSetIsEP2FieldTrue" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testGetIsEP1Table" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testSetIsEP1FieldTrue" classname="EdgeConnectorTest" time="0.0"/>
+  <testcase name="testGetIsEP1TableFalse" classname="EdgeConnectorTest" time="0.0"/>
+  <testcase name="testGetIsEP2FieldTrue" classname="EdgeConnectorTest" time="0.0"/>
+  <testcase name="testSetIsEP2TableTrue" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testGetIsEP1FieldTrue" classname="EdgeConnectorTest" time="0.001"/>
+  <testcase name="testSetIsEP1TableTrue" classname="EdgeConnectorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

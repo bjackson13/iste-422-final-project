@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="EdgeConvertCreateDDLTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2020-04-14T16:47:10" hostname="SteveCalhoonBusinessTycoon" time="0.037">
+  <properties/>
+  <testcase name="testGetFieldGrade" classname="EdgeConvertCreateDDLTest" time="0.002"/>
+  <testcase name="testGetFieldNull" classname="EdgeConvertCreateDDLTest" time="0.002"/>
+  <testcase name="testGetFieldFacSSN" classname="EdgeConvertCreateDDLTest" time="0.001"/>
+  <testcase name="testGetFieldNumber" classname="EdgeConvertCreateDDLTest" time="0.002"/>
+  <testcase name="testGetFieldStudentName" classname="EdgeConvertCreateDDLTest" time="0.001"/>
+  <testcase name="testGetFieldStudentSSN" classname="EdgeConvertCreateDDLTest" time="0.002"/>
+  <testcase name="testGetTableNull" classname="EdgeConvertCreateDDLTest" time="0.002"/>
+  <testcase name="testGetTableCourses" classname="EdgeConvertCreateDDLTest" time="0.002"/>
+  <testcase name="testGetFieldFacultyName" classname="EdgeConvertCreateDDLTest" time="0.001"/>
+  <testcase name="testGetSQLString" classname="EdgeConvertCreateDDLTest" time="0.001"/>
+  <testcase name="testNumBoundTables" classname="EdgeConvertCreateDDLTest" time="0.001"/>
+  <testcase name="testDefaultProducts" classname="EdgeConvertCreateDDLTest" time="0.002"/>
+  <testcase name="testGetProductName" classname="EdgeConvertCreateDDLTest" time="0.001"/>
+  <testcase name="testGetDatabaseName" classname="EdgeConvertCreateDDLTest" time="0.001"/>
+  <testcase name="testGetTableStudent" classname="EdgeConvertCreateDDLTest" time="0.002"/>
+  <testcase name="testStringBufferInitialized" classname="EdgeConvertCreateDDLTest" time="0.002"/>
+  <testcase name="testNumFields" classname="EdgeConvertCreateDDLTest" time="0.001"/>
+  <testcase name="testGetTableFaculty" classname="EdgeConvertCreateDDLTest" time="0.001"/>
+  <testcase name="testEmptyConstructorNumBoundTables" classname="EdgeConvertCreateDDLTest" time="0.001"/>
+  <testcase name="testGetFieldCourseName" classname="EdgeConvertCreateDDLTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
