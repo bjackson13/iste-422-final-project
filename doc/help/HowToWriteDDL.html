@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Write a DDL</title>
+        <!--Bootstrap is included to help the guide look pretty but the guides are functional without them-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container-xl">
+            <h1>How To Write A Data Definition Language from a selected file:</h1>
+            <p>
+                This guide will walk you through taking an Edge file, loading it into the Data Definition Language(DDL) program, 
+                selecting a database product to construct a new DDL with, and finally writing the new DDL to a new file.
+            </p>
+            <p><strong>In order to write a new DDL, ensure you have available: a source Edge (.edg) file and a Database Product Conversion Class file (.class)</strong></p>
+
+            <br />
+
+            <ol>
+                <li>
+                    First, we will open an Edge file we would like to convert. Select "Open Edge File" from the "File" menu and naviagte to your desired Edge file(.edg).
+                    <figure>
+                        <img src="./img/create_ddl/open_file.png" width="500" alt="Open the desired Edge file"/>
+                        <figcaption>Open your desired Edge File</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    Next, we will be setting our DDL language conversion file location. Navigate to the "Options" menu and select "Set Output File Definition Location".
+                    <figure>
+                        <img src="./img/create_ddl/set_output_file.png" width="500" alt="Set output file location menu item"/>
+                        <figcaption>Select "Set Output File Definition Location"</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    From the file explorer, navigate to the <strong>directory</strong> which contains the class file(.class) of your Data Definition Language converter. this file will be located in a directory such as 
+                    "projectpath/build/classes/java/main/". In our case we will be targeting the file "CreateDDLMySQL.class" which is included standard with the software.
+                    After selecting a class file a message will appear letting you know which DDL languages are available.
+                    <figure>
+                        <img src="./img/create_ddl/ddl_mysql.png" max-width="500" alt="DDL Conversion Class file"/>
+                        <figcaption>Select the needed DDL conversion class file from the "build" directory</figcaption>
+                    </figure>
+
+                    If you wish to verify your loaded DDL languages, please see our <a href="./SeeAvailableProducts.html">Guide to viewing avaialable DDL products.</a>
+                </li>
+                <li>
+                    Next, define your desired table fields along with any desired table relations under the "Define Relations" and "Define Tables" menus.
+                    <figure>
+                        <h5>Define tables:</h5>
+                        <img src="./img/create_ddl/define_tables.png" width="500" alt="Define desired table fields"/>
+                        <figcaption>Define your tables fields using the fields to the right of the selected table columns"</figcaption>
+                    </figure>
+                    <figure>
+                        <h5>Define relations:</h5>
+                        <img src="./img/create_ddl/define_relations.png" width="500" alt="Define desired relations"/>
+                        <figcaption>Define your desired table relations using the "Define Relations" menu</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    Once tables and relations have been defined, click the "Create DDL" button to begin the process of converting your Edge file to your desired DDL.
+                    A small dropdown menu will appear asking you to select your desired language to convert to. We will be using MySQL in this example.
+                    <figure>
+                        <img src="./img/create_ddl/select.png" max-width="500" alt="Select DDL language"/>
+                        <figcaption>Select the desired DDL language</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    Next enter the name of your new database. Then select the desired location for saving the new DDL file.
+                    <figure>
+                        <img src="./img/create_ddl/set_name.png" max-width="500" alt="Set your new database name"/>
+                        <figcaption>Set your new database name</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    Once saved, you will now have a new file that can be used to establish a databse in your system of choice! To verify all went well, open the file you just created,
+                    in our case "MySQLDB.sql".
+                    <figure>
+                        <img src="./img/create_ddl/sql_file.png" max-width="500" alt="Verify your new DDL file"/>
+                        <figcaption>Verify your new DDL file</figcaption>
+                    </figure>
+                </li>
+                <li>Repeat this process for as many Edge files as needed!</li>
+            </ol>
+        </div>
+    </body>
+</html>

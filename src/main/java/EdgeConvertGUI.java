@@ -6,6 +6,8 @@ import javax.swing.filechooser.FileFilter;
 import java.io.*;
 import java.util.*;
 import java.lang.reflect.*;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 public class EdgeConvertGUI {
    
@@ -54,7 +56,7 @@ public class EdgeConvertGUI {
    static DefaultListModel dlmDTTablesAll, dlmDTFieldsTablesAll;
    static JMenuBar jmbDTMenuBar;
    static JMenu jmDTFile, jmDTOptions, jmDTHelp;
-   static JMenuItem jmiDTOpenEdge, jmiDTOpenSave, jmiDTSave, jmiDTSaveAs, jmiDTExit, jmiDTOptionsOutputLocation, jmiDTOptionsShowProducts, jmiDTHelpAbout;
+   static JMenuItem jmiDTOpenEdge, jmiDTOpenSave, jmiDTSave, jmiDTSaveAs, jmiDTExit, jmiDTOptionsOutputLocation, jmiDTOptionsShowProducts, jmiDTHelpAbout, jmiDTHelpDDL, jmiDTHelpSeeAvailProd;
    
    //Define Relations screen objects
    static JFrame jfDR;
@@ -68,6 +70,9 @@ public class EdgeConvertGUI {
    static JMenu jmDRFile, jmDROptions, jmDRHelp;
    static JMenuItem jmiDROpenEdge, jmiDROpenSave, jmiDRSave, jmiDRSaveAs, jmiDRExit, jmiDROptionsOutputLocation, jmiDROptionsShowProducts, jmiDRHelpAbout;
    
+   //help options file name HashMap
+   HashMap<JMenuItem, String> helpMap = new HashMap<JMenuItem,String>();
+
    public EdgeConvertGUI() {
       menuListener = new EdgeMenuListener();
       radioListener = new EdgeRadioButtonListener();
@@ -146,7 +151,17 @@ public class EdgeConvertGUI {
       jmiDTHelpAbout.setMnemonic(KeyEvent.VK_A);
       jmiDTHelpAbout.addActionListener(menuListener);
       jmDTHelp.add(jmiDTHelpAbout);
-      
+      jmiDTHelpDDL = new JMenuItem("How to write a DDL");
+      jmiDTHelpDDL.setMnemonic(KeyEvent.VK_T);
+      jmiDTHelpDDL.addActionListener(menuListener);
+      helpMap.put(jmiDTHelpDDL, "doc/help/HowToWriteDDL.html");//add html file for corresponding help button
+      jmDTHelp.add(jmiDTHelpDDL);
+      jmiDTHelpSeeAvailProd = new JMenuItem("How to see available products");
+      jmiDTHelpSeeAvailProd.setMnemonic(KeyEvent.VK_P);
+      jmiDTHelpSeeAvailProd.addActionListener(menuListener);
+      jmDTHelp.add(jmiDTHelpSeeAvailProd);
+      helpMap.put(jmiDTHelpSeeAvailProd, "doc/help/SeeAvailableProducts.html");//add html file for corresponding help button
+
       jfcEdge = new JFileChooser();
       jfcOutputDir = new JFileChooser();
 	   effEdge = new ExampleFileFilter("edg", "Edge Diagrammer Files");
@@ -1299,6 +1314,22 @@ public class EdgeConvertGUI {
             JOptionPane.showMessageDialog(null, "EdgeConvert ERD To DDL Conversion Tool\n" +
                                                 "by Stephen A. Capperell\n" +
                                                 " 2007-2008");
+         }
+
+         //open help documentation for the selected ae source by seeing if the helpMap contains the menu item as a key
+         if(helpMap.containsKey(ae.getSource())) {
+            try {
+
+               //get the appropriate html file
+               String fileToOpen = helpMap.get(ae.getSource());
+               //open html file saved in document directory in the users default browser
+               File htmlFile = new File(fileToOpen);
+               java.awt.Desktop.getDesktop().browse(htmlFile.toURI());
+            }
+            catch(IOException ex) {
+               System.out.println("Exception: " + ex.getMessage());
+            }
+            
          }
       } // EdgeMenuListener.actionPerformed()
    } // EdgeMenuListener
